@@ -1,0 +1,45 @@
+body {
+  font-family: YuGothic, "Yu Gothic", san-serif;
+}
+
+/* color */
+.sk-red {
+  background: #fff0ed;
+}
+.sk-green {
+  background: #f6fcef;
+}
+.sk-blue {
+  background: #f0f8ff;
+}
+
+.logo {
+  font-family: YuMincho, "Yu Mincho", serif;
+  font-weight: bolder;
+}
+.logo h1 {
+  margin: 1rem auto;
+}
+.logo h2,h3,p {
+  margin: 0.25rem auto;
+}
+.parenthesis {
+  font-size: 70%;
+}
+
+.scenery.row {
+  margin: 0;
+}
+.scenery.row .col {
+  padding: 0;
+}
+
+nav .brand-logo {
+  margin-left: 1rem;
+}
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    font-size: 2rem;
+    margin-left: auto;
+  }
+}
