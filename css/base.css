@@ -13,7 +13,7 @@ body {
   background: #f0f8ff;
 }
 
-.logo {
+.logo, .brand-logo {
   font-family: YuMincho, "Yu Mincho", serif;
   font-weight: bolder;
 }
