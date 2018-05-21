@@ -13,7 +13,7 @@ body {
   background: #f0f8ff;
 }
 
-.logo, .brand-logo {
+.logo {
   font-family: YuMincho, "Yu Mincho", serif;
   font-weight: bolder;
 }
@@ -36,6 +36,7 @@ body {
 
 nav .brand-logo {
   margin-left: 1rem;
+  font-family: YuMincho, "Yu Mincho", serif;
 }
 @media only screen and (max-width: 992px) {
   nav .brand-logo {
