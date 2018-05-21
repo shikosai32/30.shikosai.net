@@ -12,6 +12,9 @@ body {
 .sk-blue {
   background: #f0f8ff;
 }
+.sk-3colors {
+  background: linear-gradient(to right, #fff0ed 0%, #fff0ed 40%, #f6fcef 40%, #f6fcef 60%, #f0f8ff 60%, #f0f8ff 100%);
+}
 
 .logo {
   font-family: YuMincho, "Yu Mincho", serif;
