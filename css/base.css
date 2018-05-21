@@ -1,4 +1,6 @@
-body {
+@charset 'utf-8';
+
+html, body {
   font-family: YuGothic, "Yu Gothic", san-serif;
 }
 
@@ -34,12 +36,50 @@ body {
   padding: 0;
 }
 
+
 nav .brand-logo {
   margin-left: 1rem;
 }
-@media only screen and (max-width: 992px) {
+
+@media screen and (max-width: 992px) {
+  
   nav .brand-logo {
     font-size: 2rem;
+    left: 150px;
     margin-left: auto;
   }
+  
+}
+
+@media screen and (max-width: 480px) {
+  
+  html, body, header, #above-nav {
+    height: 100%;
+  }
+  
+  #shikosai-logo {
+    margin: 4rem 0;
+  }
+  
+  #shikosai-logo img {
+    margin: 0;
+  }
+  
+  .scenery.row {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .kosen-text {
+    margin: 4rem 0;
+  }
+  
+  nav {
+    z-index: 999;
+  }
+  
+  main {
+    margin-top: 56px;
+  }
+  
 }
