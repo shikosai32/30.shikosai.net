@@ -2,6 +2,12 @@
 茨香祭のWebサイト。
 branch: st14d07
 
+### Ver 0.12
+- ロゴ部のheightが100%になる仕様をデスクトップ向けにも反映
+- 背景画像をMaterial Design風のものに変更
+- ロゴ画像に影（縁取り）を追加
+- メニューバー上のイラストの地面が浮いてしまう問題を修正（各img要素にvertical-align:bottom付与）
+
 ### Ver 0.11
 - 外部JS読み込みをbody直下からheadへ移し、defer属性付与
 - &lt;span&gt;の誤記を修正

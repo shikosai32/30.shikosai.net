@@ -4,7 +4,47 @@ html, body {
   font-family: YuGothic, "Yu Gothic", san-serif;
 }
 
-/* color */
+html, body, header, #above-nav {
+  height: 100%;
+}
+
+header {
+  background: no-repeat center url("../images/wallpaper-proposal4.jpg") #f0f8ff;
+  background-size: cover;
+}
+
+#shikosai-logo {
+  margin: 4rem 0;
+}
+
+#shikosai-logo img {
+  width: 60%;
+  min-width: 600px;
+}
+
+.scenery.row {
+  position: absolute;
+  bottom: 0;
+}
+
+.scenery.row .col img {
+  vertical-align: bottom;
+}
+
+.kosen-text {
+  margin: 3rem 0;
+}
+
+nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+main {
+  margin-top: 56px;
+}
+
 .sk-red {
   background: #fff0ed;
 }
@@ -36,13 +76,18 @@ html, body {
   padding: 0;
 }
 
-
 nav .brand-logo {
   margin-left: 1rem;
 }
 
 @media screen and (max-width: 992px) {
   
+  #shikosai-logo img {
+    min-width: 0;
+    width: 100%;
+    margin: 10% 0;
+  }
+
   nav .brand-logo {
     font-size: 2rem;
     left: 150px;
@@ -53,33 +98,6 @@ nav .brand-logo {
 
 @media screen and (max-width: 480px) {
   
-  html, body, header, #above-nav {
-    height: 100%;
-  }
-  
-  #shikosai-logo {
-    margin: 4rem 0;
-  }
-  
-  #shikosai-logo img {
-    margin: 0;
-  }
-  
-  .scenery.row {
-    position: absolute;
-    bottom: 0;
-  }
-  
-  .kosen-text {
-    margin: 4rem 0;
-  }
-  
-  nav {
-    z-index: 999;
-  }
-  
-  main {
-    margin-top: 56px;
-  }
+
   
 }
