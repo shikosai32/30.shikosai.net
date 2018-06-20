@@ -1,88 +1,211 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf-8">
-      
-      <!-- Delete schemes when it is released -->
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-      
-      
-      <!--JavaScript at end of body for optimized loading-->
-      <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-      <script defer src="js/base.js"></script>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Delete schemes when it's released -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!--JavaScript at end of body for optimized loading-->
+    <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script defer src="js/base.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/base.css">
+    
+    <title>第30回茨香祭 Teaser</title>
+  </head>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="stylesheet" href="css/base.css">
-      
-      <title>Top - 第30回茨香祭</title>
-    </head>
-
-    <body>
-      <header>
-        <div id="above-nav">
-          <div class="container center-align logo section">
-            <h1 id="shikosai-logo"><img src="images/logo-top.png" alt="第30回茨香祭Logo" class="responsive-img"></h1>
-            <h2 class="show-on-large hide-on-med-and-down">2018/10/20<span class="parenthesis">[</span>sat<span class="parenthesis">]</span> - 21<span class="parenthesis">[</span>sun<span class="parenthesis">]</span></h2>
-            <h3 class="show-on-medium-and-down hide-on-large-only">2018/10/20<span class="parenthesis">[</span>sat<span class="parenthesis">]</span> - 21<span class="parenthesis">[</span>sun<span class="parenthesis">]</span></h3>
-            <p class="flow-text kosen-text">茨城高専 | National Institute of Technology, Ibaraki College</p>
+  <body>
+    <header>
+      <nav id="navbar" class="unscrolled">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo"><img src="images/logo-shikosai-w.svg" alt="第30回茨香祭"></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i id="menuicon" class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="">茨香祭について</a></li>
+            <li><a href="">展示/模擬店</a></li>
+            <li><a href="">イベント</a></li>
+            <li><a href="">会場マップ</a></li>
+            <li><a href="">アクセス</a></li>
+          </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="">茨香祭について</a></li>
+        <li><a href="">展示/模擬店</a></li>
+        <li><a href="">イベント</a></li>
+        <li><a href="">会場マップ</a></li>
+        <li><a href="">アクセス</a></li>
+      </ul>
+      <div id="above-nav" class="valign-wrapper">
+        <div class="container center-align logo section">
+          <!--h1 id="shikosai-logo"><img src="images/logo-refined.svg" alt="第30回茨香祭Logo" class="responsive-img"></h1>-->
+          <div id="shikosai-logo">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" viewBox="-5 -5 819 510" style="enable-background:new 0 0 809 500;" xml:space="preserve">
+              <style type="text/css">
+                #path-lb, #path-lt {
+                  fill: #F44336;
+                  stroke: #F44336;
+                  animation: anim1 4s;
+                }
+                #path-ct {
+                  fill: #4CAF50;
+                  stroke: #4CAF50;
+                  animation: anim2 4s;
+                }
+                #path-rb, #path-rt {
+                  fill: #2196F3;
+                  stroke: #2196F3;
+                  animation: anim3 4s;
+                }
+                .st0 {
+                  stroke-width: 0;
+                  stroke-linejoin: round;
+                  stroke-dasharray: 2000;
+                  stroke-dashoffset: 0;
+                  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+                }
+                @keyframes anim1 {
+                  0% {
+                    stroke: transparent;
+                    stroke-width: 4;
+                    stroke-dashoffset: 2000;
+                    fill: transparent;
+                  }
+                  60% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 0;
+                    fill: #F44336;
+                  }
+                }
+                @keyframes anim2 {
+                  0% {
+                    stroke: transparent;
+                    stroke-width: 4;
+                    stroke-dashoffset: 2000;
+                    fill: transparent;
+                  }
+                  60% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 0;
+                    fill: #4CAF50;
+                  }
+                }
+                @keyframes anim3 {
+                  0% {
+                    stroke: transparent;
+                    stroke-width: 4;
+                    stroke-dashoffset: 2000;
+                    fill: transparent;
+                  }
+                  60% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 0;
+                    fill: #2196F3;
+                  }
+                }
+              </style>
+              <path id="path-lb" class="st0" d="M116.1,355.3L46.5,484.1c0,0-19.1,35-38,0c0,0-18.8-35.1,0-70.4L78,284.9L116.1,355.3z"/>
+              <path id="path-ct" class="st0" d="M654.1,355.3l-69.4,128.4c-8.3,14.9-19.1,14.9-19.1,14.9h-53.8c-10.9,0-19.2-14.9-19.2-14.9
+                L296.5,120.6c-10.9-20.5-26.9-20.6-26.9-20.6c-15.8,0.1-26.9,20.2-26.9,20.2l-50.5,94.1l-38-70.4l69.5-128.5c8.2-15,19.1-15,19.1-15
+                h53.8c10.9,0,19.1,14.9,19.1,14.9l196.1,363.3c10.9,20.5,26.9,20.5,26.9,20.5c15.9,0,26.9-20.6,26.9-20.6l50.5-93.7L654.1,355.3z"/>
+              <path id="path-rt" class="st0" d="M730.3,214.3L802.1,81c16.7-30.9-2-65.6-2-65.6c-19.1-35.3-38.3,0-38.3,0l-69.5,128.5L730.3,214.3
+                z"/>
+              <path id="path-lt" class="st0" d="M385,355.2l-69.5,128.7c-8.2,14.9-19.1,14.9-19.1,14.9h-53.8c-10.9,0-19.1-14.8-19.1-14.8
+                L8.6,85.9C-10.5,50,8.1,15.7,8.1,15.7c19.3-35.7,38.6-0.1,38.6-0.1l196,363.3c11,20.2,26.9,20.2,26.9,20.2
+                c15.9,0,26.9-20.6,26.9-20.6l50.5-93.9L385,355.2z"/>
+              <path id="path-rb" class="st0" d="M461.2,214.2l50.5-93.6c0,0,11-20.6,26.9-20.6c0,0,15.9,0,26.9,20.1L762,483.8
+                c0,0,18.7,35.1,38.3,0c0,0,18.3-35.3,0-69.4L584.8,15.3c0,0-8.3-14.9-19.2-15h-53.8c0,0-10.9,0-19.1,15l-69.6,128.4L461.2,214.2z"/>
+            </svg>
           </div>
-          <div class="scenery row">
-            <div class="col m4 s6">
-                <img src="images/scenery-left.svg" alt="scenery-left" class="responsive-img">
-            </div>
-            <div class="col m4 hide-on-small-only">
-                <img src="images/scenery-center.svg" alt="scenery-center" class="responsive-img">
-            </div>
-            <div class="col m4 s6">
-                <img src="images/scenery-right.svg" alt="scenery-right" class="responsive-img">
-            </div>
+          <h1 id="shikosai-text"><img src="images/logo-shikosai.svg" alt="第30回茨香祭Logo" class="responsive-img"></h1>
+          <h2 class="show-on-large hide-on-med-and-down">2018/10/20<span class="parenthesis">[</span>sat<span class="parenthesis">]</span> - 21<span class="parenthesis">[</span>sun<span class="parenthesis">]</span></h2>
+          <h3 class="show-on-medium-and-down hide-on-large-only">2018/10/20<span class="parenthesis">[</span>sat<span class="parenthesis">]</span> - 21<span class="parenthesis">[</span>sun<span class="parenthesis">]</span></h3>
+          <p class="flow-text kosen-text">茨城高専 | National Institute of Technology, Ibaraki College</p>
+        </div>
+        <div class="scenery row">
+          <div class="col m4 s6">
+              <img src="images/scenery-left.svg" alt="scenery-left" class="responsive-img">
+          </div>
+          <div class="col m4 hide-on-small-only">
+              <img src="images/scenery-center.svg" alt="scenery-center" class="responsive-img">
+          </div>
+          <div class="col m4 s6">
+              <img src="images/scenery-right.svg" alt="scenery-right" class="responsive-img">
           </div>
         </div>
-        <nav>
-          <div class="nav-wrapper teal darken-1">
-            <a href="#!" class="brand-logo">第30回 茨香祭</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="">茨香祭について</a></li>
-              <li><a href="">展示/模擬店</a></li>
-              <li><a href="">イベント</a></li>
-              <li><a href="">会場マップ</a></li>
-              <li><a href="">アクセス</a></li>
-            </ul>
+      </div>
+    </header>
+
+    <!-- 以下未完成 -->
+    <!--main class="sk-green">
+      <div class="row center-align">
+        <section class="col s4">
+          <h2>茨香祭とは?</h2>
+        </section>
+        <section class="col s4">
+          <h2>展示を調べる</h2>
+        </section>
+        <section class="col s4">
+          <h2>茨香祭に行く</h2>
+        </section>
+      </div>
+    </main-->
+
+    <main>
+      <section class="top-section" id="top-about">
+        <h2 class="center-align">茨香祭とは？</h2>
+        <div class="row">
+          <div class="col m6 s12 section-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
-        </nav>
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="">茨香祭について</a></li>
-          <li><a href="">展示/模擬店</a></li>
-          <li><a href="">イベント</a></li>
-          <li><a href="">会場マップ</a></li>
-          <li><a href="">アクセス</a></li>
-        </ul>
-      </header>
+          <div class="col m6 s12">
 
-      <!-- 以下未完成 -->
-      <main class="sk-green">
-        <div class="row center-align">
-          <section class="col s4">
-            <h2>茨香祭とは?</h2>
-          </section>
-          <section class="col s4">
-            <h2>展示を調べる</h2>
-          </section>
-          <section class="col s4">
-            <h2>茨香祭に行く</h2>
-          </section>
+          </div>
         </div>
-      </main>
+      </section>
+      <section class="top-section row" id="top-exhibition">
+        <h2 class="center-align">展示を調べる</h2>
+        <div class="row">
+          <div class="col m6 s12">
 
-      <footer class="teal darken-1 white-text center-align">
-        <small>&copy; 2018 茨香祭実行委員会</small>
-      </footer>
-      
-    </body>
-  </html>
+          </div>
+          <div class="col m6 s12 section-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </section>
+      <section class="top-section" id="top-access">
+        <h2 class="center-align">茨香祭に行く</h2>
+        <div class="row">
+          <div class="col m6 s12 section-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="col m6 s12">
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="teal darken-1 white-text center-align">
+      <small>&copy; 2018 茨香祭実行委員会</small>
+    </footer>
+    
+  </body>
+</html>

@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 html, body {
-  font-family: YuGothic, "Yu Gothic", san-serif;
+  font-family: "Arial", "Hiragino Kaku Gothic ProN", YuGothic, "Yu Gothic", san-serif;
 }
 
 html, body, header, #above-nav {
@@ -9,17 +9,69 @@ html, body, header, #above-nav {
 }
 
 header {
-  background: no-repeat center url("../images/wallpaper-proposal4.jpg") #f0f8ff;
+  background: no-repeat center url("../images/back3.jpg");
   background-size: cover;
+  /*background-color: #f0f8ff;*/
+}
+
+#navbar {
+  background-color: #009688;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#navbar.unscrolled #menuicon {
+  color: #fff;
+}
+
+.brand-logo img {
+  width: 10rem;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+
+/* scrolled 100% */
+#navbar.unscrolled {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: unset !important;
+}
+#navbar.unscrolled .nav-wrapper ul li a, #navbar.unscrolled #menuicon {
+  color: #333;
+}
+#navbar.unscrolled .brand-logo img {
+  display: none;
+}
+
+/* scrolled anim */
+#navbar.anim {
+  transition: all .4s ease;
+}
+#navbar.anim .nav-wrapper ul li a, #navbar.unscrolled #menuicon {
+  transition: color .25s ease;
+}
+#navbar.unscrolled.anim .brand-logo img {
+  transition: color .25s ease;
 }
 
 #shikosai-logo {
-  margin: 4rem 0;
+  margin: 2rem auto 1rem;
+  width: 40%;
+  max-width: 420px;
+  min-width: 320px;
+  opacity: 0.9;
 }
 
-#shikosai-logo img {
-  width: 60%;
-  min-width: 600px;
+#shikosai-text img{
+  margin: 1rem auto 1rem;
+  width: 50%;
+  max-width: 480px;
+  min-width: 360px;
+}
+
+.kosen-text {
+  margin: 1rem 0;
 }
 
 .scenery.row {
@@ -29,20 +81,6 @@ header {
 
 .scenery.row .col img {
   vertical-align: bottom;
-}
-
-.kosen-text {
-  margin: 3rem 0;
-}
-
-nav {
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-main {
-  margin-top: 56px;
 }
 
 .sk-red {
@@ -76,19 +114,29 @@ main {
   padding: 0;
 }
 
-nav .brand-logo {
-  margin-left: 1rem;
+main {
+  padding: 0 1rem;
+}
+
+.section-text {
+  padding: 8rem 0 !important;
 }
 
 @media screen and (max-width: 992px) {
   
-  #shikosai-logo img {
+  #shikosai-logo {
+    max-width: 360px;
     min-width: 0;
-    width: 100%;
-    margin: 10% 0;
+    width: 80%;
   }
 
-  nav .brand-logo {
+  #shikosai-text img {
+    max-width: 360px;
+    min-width: 0;
+    width: 90%;
+  }
+
+  #navbar .brand-logo {
     font-size: 2rem;
     left: 150px;
     margin-left: auto;
@@ -97,7 +145,15 @@ nav .brand-logo {
 }
 
 @media screen and (max-width: 480px) {
-  
 
-  
+  #shikosai-logo {
+    max-width: 280px;
+    width: 90%;
+  }
+
+  #shikosai-text img {
+    max-width: 320px;
+    width: 100%;
+  }
+
 }
