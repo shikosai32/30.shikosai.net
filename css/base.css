@@ -1,17 +1,17 @@
 @charset 'utf-8';
 
 html, body {
-  font-family: "Arial", "Hiragino Kaku Gothic ProN", YuGothic, "Yu Gothic", san-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", YuGothic, YuGothicM, "Meiryo", san-serif;
 }
 
-html, body, header, #above-nav {
+html, body, header, #top-screen {
   height: 100%;
 }
 
 header {
-  background: no-repeat center url("../images/back3.jpg");
+  background: no-repeat center url("../images/wallpaper-top.jpg");
   background-size: cover;
-  /*background-color: #f0f8ff;*/
+  /* background-color: #f0f8ff; */
 }
 
 #navbar {
@@ -21,23 +21,22 @@ header {
   left: 0;
   z-index: 999;
 }
-
-#navbar.unscrolled #menuicon {
+#navbar #menuicon {
   color: #fff;
 }
-
-.brand-logo img {
+#navbar .brand-logo img {
   width: 10rem;
   vertical-align: middle;
   margin-left: 1rem;
 }
 
-/* scrolled 100% */
+/* scrolled in 100% */
 #navbar.unscrolled {
   background-color: rgba(255, 255, 255, 0.8) !important;
   box-shadow: unset !important;
 }
-#navbar.unscrolled .nav-wrapper ul li a, #navbar.unscrolled #menuicon {
+/* #navbar.unscrolled .nav-wrapper ul li a, */
+#navbar.unscrolled #menuicon {
   color: #333;
 }
 #navbar.unscrolled .brand-logo img {
@@ -55,21 +54,45 @@ header {
   transition: color .25s ease;
 }
 
-#shikosai-logo {
-  margin: 2rem auto 1rem;
+#special-page-link {
+  color: #000 !important;
+}
+/* Logo */
+.logo {
+  font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
+  font-weight: bolder;
+}
+.logo h1 {
+  margin: 1rem auto;
+}
+.logo h2,h3,p {
+  margin: 0.25rem auto;
+}
+#thanks-logo img, #shikosai-textlogo img {
+  margin: .5rem auto .5rem;
+  max-width: 480px;
+  min-width: 360px;
+}
+#thanks-logo img {
+  width: 30%;
+}
+#shikosai-textlogo img {
+  width: 40%;
+}
+#shikosai-logo { /* XXX */
+  margin: 1rem auto;
   width: 40%;
   max-width: 420px;
   min-width: 320px;
   opacity: 0.9;
 }
 
-#shikosai-text img{
-  margin: 1rem auto 1rem;
-  width: 50%;
-  max-width: 480px;
-  min-width: 360px;
+.schedule-date.show-on-medium-and-down {
+  font-size: 2.4rem;
 }
-
+.parenthesis {
+  font-size: 70%;
+}
 .kosen-text {
   margin: 1rem 0;
 }
@@ -77,8 +100,11 @@ header {
 .scenery.row {
   position: absolute;
   bottom: 0;
+  margin: 0;
 }
-
+.scenery.row .col {
+  padding: 0;
+}
 .scenery.row .col img {
   vertical-align: bottom;
 }
@@ -93,67 +119,102 @@ header {
   background: #f0f8ff;
 }
 
-.logo {
-  font-family: YuMincho, "Yu Mincho", serif;
-  font-weight: bolder;
-}
-.logo h1 {
-  margin: 1rem auto;
-}
-.logo h2,h3,p {
-  margin: 0.25rem auto;
-}
-.parenthesis {
-  font-size: 70%;
-}
-
-.scenery.row {
-  margin: 0;
-}
-.scenery.row .col {
-  padding: 0;
-}
-
 main {
   padding: 0 1rem;
 }
 
-.section-text {
-  padding: 8rem 0 !important;
+.top-section h2 {
+  position: relative;
+}
+.top-section h2::before {
+  font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
+  z-index: -1;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  font-size: 8rem;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+#top-about h2::before {
+  content: "ABOUT";
+  color: #ffebee;
+}
+#top-message h2::before {
+  content: "MESSAGE";
+  color: #e8f5e9;
+}
+#top-access h2::before {
+  content: "ACCESS";
+  color: #e3f2fd;
 }
 
 @media screen and (max-width: 992px) {
-  
-  #shikosai-logo {
-    max-width: 360px;
-    min-width: 0;
-    width: 80%;
+  .top-section h2::before {
+    font-size: 6rem;
   }
-
-  #shikosai-text img {
-    max-width: 360px;
-    min-width: 0;
-    width: 90%;
-  }
-
-  #navbar .brand-logo {
-    font-size: 2rem;
-    left: 150px;
-    margin-left: auto;
-  }
-  
 }
 
 @media screen and (max-width: 480px) {
+  .top-section h2 {
+    font-size: 2rem;
+  }
+  .top-section h2::before {
+    font-size: 4rem;
+  }
+}
 
-  #shikosai-logo {
-    max-width: 280px;
-    width: 90%;
+.googlemap-wrapper {
+  position: relative;
+  padding: 30px 0 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.googlemap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-contents span {
+  line-height: 2rem;
+  vertical-align: bottom;
+}
+.footer-contents .material-icons {
+  font-size: 2rem;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 992px) {
+  #navbar .brand-logo {
+    font-size: 2rem;
+    left: 150px;
+  }
+  #navbar .brand-logo img {
+    margin: 0;
   }
 
-  #shikosai-text img {
+  #thanks-logo img, #shikosai-textlogo img {
+    max-width: 360px;
+    min-width: 240px;
+  }
+  #shikosai-logo { /* XXX */
     max-width: 320px;
+    min-width: 240px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #shikosai-textlogo img {
+    max-width: 240px;
     width: 100%;
   }
-
+  #thanks-logo img, #shikosai-textlogo {
+    max-width: 240px;
+    width: 90%;
+  }
 }
