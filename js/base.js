@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.sidenav').sidenav();
-  var flag = false;
+  $('.materialboxed').materialbox();
   scrollCond(false);
 });
 
