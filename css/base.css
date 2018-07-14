@@ -12,13 +12,20 @@ body {
   left: 0;
   z-index: 999;
 }
-#navbar #menuicon {
-  color: #000 !important;
+.nav-wrapper {
+  position: relative;
 }
-#navbar .brand-logo img {
-  margin-left: 1rem;
-  transform: translateY(0);
-  width: 10rem;
+.brand-logo {
+  width: 6rem;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  right: 0;
+}
+.brand-logo img {
+  width: 100%;
+  height: 48px;
+  margin: 8px auto;
 }
 
 /* scrolled until 100% */
@@ -30,8 +37,8 @@ body {
 #navbar.unscrolled #menuicon {
   color: #333
 }*/
-#navbar.unscrolled .brand-logo img {
-  transform: translateY(-500%);
+#navbar.unscrolled .brand-logo {
+  transform: translateY(-200%);
 }
 
 /* scrolled with anim */
@@ -44,7 +51,7 @@ body {
   transition: color .25s ease;
 }
 */
-#navbar.anim .brand-logo img {
+#navbar.anim .brand-logo {
   transition: transform .3s ease-in-out;
 }
 
@@ -58,10 +65,10 @@ body {
   background: no-repeat center url("../images/wallpaper-top.jpg");
   background-size: cover;
 }
-/* Logo */
+
 .logo {
   font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
-  font-weight: bolder;
+  font-weight: bold;
 }
 .logo h1 {
   margin: 1rem auto;
@@ -69,34 +76,32 @@ body {
 .logo h2,h3,p {
   margin: 0.25rem auto;
 }
-#thanks-logo img, #shikosai-textlogo img {
-  margin: .5rem auto .5rem;
-  max-width: 480px;
-  min-width: 360px;
+#thanks-logo {
+  margin-top: 2rem; /* for centralized */
 }
-#thanks-logo img {
+#thanks-logo img, #shikosai-textlogo img {
+  margin: .5rem auto;
+  max-width: 600px;
+  min-width: 300px;
+  width: 30%;
+}
+#shikosai-logo { /* XXX */
+  margin: 1rem auto;
+  max-width: 540px;
+  min-width: 280px;
   width: 30%;
 }
 #shikosai-textlogo img {
   width: 40%;
 }
-#shikosai-logo { /* XXX */
-  margin: 1rem auto;
-  width: 40%;
-  max-width: 420px;
-  min-width: 320px;
-  opacity: 0.9;
+#date {
+  font-size: 2.5rem;
 }
-.schedule-date.show-on-medium-and-down {
-  font-size: 2.4rem;
-}
-span.nobr {
-  white-space: nowrap;
-}
-.parenthesis {
+.bkt {
   font-size: 70%;
 }
 .kosen-text {
+  font-size: 1.5rem;
   margin: 1rem 0;
 }
 .scenery.row {
@@ -124,12 +129,11 @@ span.nobr {
 
 .main-section {
   width: 100%;
-  padding: 2rem 5% 0;
 }
 .main-section .row {
   margin: 3rem 0;
 }
-.main-section h2 {
+.section-title {
   border-left: 1rem solid;
   color: #4e4e4e;
   font-size: 4rem;
@@ -140,16 +144,16 @@ span.nobr {
   text-shadow: 2px 2px #ddd;
   z-index: 0;
 }
-#top-about h2 {
+#top-about .section-title {
   border-left-color: #F44335;
 }
-#top-message h2 {
+#top-message .section-title {
   border-left-color: #4CAF50;
 }
-#top-access h2 {
+#top-access .section-title {
   border-left-color: #2196F3;
 }
-.main-section h2::before {
+.section-title::before {
   font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
   font-size: 10rem;
   letter-spacing: .3rem;
@@ -160,15 +164,15 @@ span.nobr {
   top: -1rem;
   z-index: -1;
 }
-#top-about h2::before {
+#top-about .section-title::before {
   content: "ABOUT";
   color: #ffebee;
 }
-#top-message h2::before {
+#top-message .section-title::before {
   content: "MESSAGE";
   color: #e8f5e9;
 }
-#top-access h2::before {
+#top-access .section-title::before {
   content: "ACCESS";
   color: #e3f2fd;
 }
@@ -182,9 +186,20 @@ span.nobr {
 .section-text p {
   margin: 2rem 0;
 }
+.section-text cite {
+  line-height: 2rem !important;
+}
+.row.gallery {
+  margin: 1rem 0;
+}
 .gallery .col {
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+}
+.gallery img {
+  width: 90%;
+  height: 90%;
+  margin: 5%;
 }
 #top-message cite {
   line-height: 6rem;
@@ -200,6 +215,7 @@ span.nobr {
 .icon-wrapper {
   line-height: 2rem;
   vertical-align: bottom;
+  white-space: nowrap;
 }
 .material-icons {
   line-height: 2rem;
@@ -211,89 +227,131 @@ span.nobr {
 
 /* special page */
 main#sp {
-  background: no-repeat center url("../images/wallpaper-md.jpg");
+  background: no-repeat center fixed url("../images/wallpaper-md.jpg");
   background-size: cover;
   margin-top: 64px;
 }
-main#sp section {
+main#sp .main-section {
   background: rgba(255,255,255,0.6);
   margin: 0 5%;
-  padding: 4rem 0;
+  padding: 2rem 0;
   width: 90%;
-  min-height: calc(100vh - 64px);
 }
-main#sp section h2 {
+main#sp .section-title {
   border: none;
-  line-height: 150%;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  margin: 0 2rem;
+  padding: 0;
+  text-align: center;
+}
+main#sp .section-text {
+  padding: 1rem 2rem !important;
+}
+main#sp figure {
+  width: 100%;
+  margin: 0;
+}
+main#sp figcaption {
+  text-align: center;
+}
+main#sp .col {
+  padding: 1rem 2rem;
 }
 
 @media screen and (max-width: 992px) {
-  #navbar .brand-logo {
-    font-size: 2rem;
-    left: 4rem;
-    transform: translateX(0);
+  #menuicon {
+    display: block;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin: auto;
   }
-  #navbar .brand-logo img {
+  .sidenav-trigger::before {
+    color: #333;
+    content: "MENU";
+    font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
+    font-size: 1.5rem;
+    left: 36px;
+    position: absolute;
+    top: 0;
+  }
+  .brand-logo {
     margin: 0;
   }
-  #navbar.unscrolled::before {
-    color: #f57f17;
-    content: "←CHECK!!";
-    font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    left: 56px;
-    position: absolute;
-    text-shadow: 1px 1px rgba(128,128,128, 0.5);
-    top: 0;
+  #navbar.unscrolled .brand-logo {
+    transform: translate(-50%, -200%);
   }
 
   #thanks-logo img, #shikosai-textlogo img {
     max-width: 360px;
-    min-width: 240px;
+    min-width: 300px;
   }
   #shikosai-logo { /* XXX */
-    max-width: 320px;
-    min-width: 240px;
+    max-width: 340px;
+    min-width: 260px;
+  }
+  #date {
+    margin: 1rem 0;
+  }
+  .kosen-text {
+    font-size: 1.2rem;
   }
 
-  .main-section h2 {
+  .section-title {
     font-size: 3rem;
     line-height: 6rem;
   }
-  .main-section h2::before {
+  .section-title::before {
     font-size: 8rem;
     line-height: 8rem;
     padding: 0;
     top: -1rem;
   }
+
+  /* special */
+  main#sp .col {
+    padding: 1rem;
+  }
 }
 
-@media screen and (max-width: 640px) {
-  #shikosai-textlogo img {
-    max-width: 240px;
+@media screen and (max-width: 600px) {
+  img, svg {
+    min-width: 0 !important;
+  }
+  .brand-logo img {
+    margin: 7px 0;
+    height: 42px;
+  }
+  #thanks-logo img, #shikosai-textlogo img {
+    max-width: 280px;
     width: 100%;
   }
-  #thanks-logo img, #shikosai-textlogo {
+  #shikosai-logo {
     max-width: 240px;
-    width: 90%;
+    min-width: 0;
+    width: 100%;
   }
-  
-  .main-section {
-    padding: 1rem 5%;
-  }
+
   .main-section .row {
     margin: 0;
   }
-  .main-section h2 {
+  .section-title {
     font-size: 2rem;
+    line-height: 4rem;
+    margin-top: 1.8rem;
     padding-left: 1rem;
     border-left-width: .5rem;
   }
-  .main-section h2::before {
+  .section-title::before {
     font-size: 4rem;
-    line-height: 6rem;
+    line-height: 4rem;
     top: 0rem;
+  }
+  .section-text p {
+    margin: 1rem 0;
   }
 
   /* special page */
@@ -303,5 +361,43 @@ main#sp section h2 {
   main#sp .main-section {
     padding: 1rem 0;
     min-height: calc(100vh - 56px);
+  }
+  main#sp .section-title {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+  main#sp .col {
+    padding: 1rem .2rem;
+  }
+}
+
+@media screen and (max-width: 360px) { /* for iPhone 5s, SE and earlier */
+  
+  .sidenav-trigger::before {
+    display: none;
+  }
+
+  #thanks-logo img {
+    width: 180px;
+  }
+  #shikosai-logo svg {
+    width: 200px;
+  }
+  #shikosai-textlogo img {
+    width: 180px;
+  }
+  h3#date {
+    font-size: 1.5rem;
+  }
+  .kosen-text {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+  }
+  .section-title::before {
+    font-size: 3rem;
   }
 }
