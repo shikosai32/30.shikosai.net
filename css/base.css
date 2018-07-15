@@ -1,7 +1,8 @@
 @charset 'utf-8';
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", YuGothic, YuGothicM, "Meiryo", san-serif;
+  font-family: "Helvetica Neue", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", YuGothic, YuGothicM, "Meiryo", san-serif;
+  letter-spacing: .1rem;
 }
 
 /* navbar */
@@ -116,23 +117,16 @@ body {
   vertical-align: bottom;
 }
 
-/* color schemes */
-.sk-red {
-  background: #fff0ed;
-}
-.sk-green {
-  background: #f6fcef;
-}
-.sk-blue {
-  background: #f0f8ff;
-}
-
+/* main-section */
 .main-section {
+  margin-bottom: 10rem;
   width: 100%;
 }
 .main-section .row {
   margin: 3rem 0;
 }
+
+/* section title */
 .section-title {
   border-left: 1rem solid;
   color: #4e4e4e;
@@ -141,7 +135,7 @@ body {
   line-height: 8rem;
   padding-left: 2rem;
   position: relative;
-  text-shadow: 2px 2px #ddd;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
 #top-about .section-title {
@@ -177,6 +171,7 @@ body {
   color: #e3f2fd;
 }
 
+/* section-text */
 .section-text {
   color: #333;
   font-size: 1.1rem;
@@ -187,9 +182,18 @@ body {
   margin: 2rem 0;
 }
 .section-text cite {
+  font-size: 1.2rem;
   line-height: 2rem !important;
 }
-.row.gallery {
+
+/* style each elememt of sections */
+.serif-text {
+  font-family: Georgia, "Times New Roman", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.nobr {
+  white-space: nowrap;
+}
+.gallery {
   margin: 1rem 0;
 }
 .gallery .col {
@@ -201,16 +205,11 @@ body {
   height: 90%;
   margin: 5%;
 }
-#top-message cite {
-  line-height: 6rem;
-  font-size: 1.2rem;
+table tr {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
-
-.page-footer {
-  padding-top: 0 !important;
-}
-.page-footer * {
-  color: #333;
+table th {
+  text-align: center;
 }
 .icon-wrapper {
   line-height: 2rem;
@@ -221,15 +220,39 @@ body {
   line-height: 2rem;
   vertical-align: middle;
 }
-#top-access th {
+
+/* footer */
+.page-footer {
+  padding-top: 0 !important;
+}
+.page-footer * {
+  color: #333;
+}
+.page-footer h5 {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  line-height: 3rem;
   text-align: center;
 }
 
 /* special page */
 main#sp {
-  background: no-repeat center fixed url("../images/wallpaper-md.jpg");
-  background-size: cover;
   margin-top: 64px;
+  background: none;
+  position: relative;
+  z-index: 0;
+}
+main#sp::before {
+  background: url("../images/wallpaper-md.jpg") center center/cover no-repeat;
+  content: "";
+  height: calc(100vh - 64px);
+  left: 0;
+  margin-top: 64px;
+  position: fixed;
+  top: 0;
+  transform: translate3d(0, 0, -1px);
+  width: 100%;
+  z-index: -1;
 }
 main#sp .main-section {
   background: rgba(255,255,255,0.6);
@@ -311,6 +334,10 @@ main#sp .col {
     top: -1rem;
   }
 
+  table {
+    margin: 2rem 0;
+  }
+
   /* special */
   main#sp .col {
     padding: 1rem;
@@ -335,13 +362,16 @@ main#sp .col {
     width: 100%;
   }
 
+  .main-section {
+    margin-bottom: 6rem;
+  }
   .main-section .row {
     margin: 0;
   }
   .section-title {
     font-size: 2rem;
     line-height: 4rem;
-    margin-top: 1.8rem;
+    margin: 1.8rem 0;
     padding-left: 1rem;
     border-left-width: .5rem;
   }
@@ -354,8 +384,17 @@ main#sp .col {
     margin: 1rem 0;
   }
 
+  .page-footer h5 {
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+  }
+
   /* special page */
   main#sp {
+    margin-top: 56px;
+  }
+  main#sp::before {
+    height: calc(100vh - 56px);
     margin-top: 56px;
   }
   main#sp .main-section {
