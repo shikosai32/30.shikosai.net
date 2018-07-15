@@ -135,7 +135,7 @@ body {
   line-height: 8rem;
   padding-left: 2rem;
   position: relative;
-  text-shadow: 2px 2px #ddd;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
 #top-about .section-title {
@@ -237,15 +237,17 @@ table th {
 
 /* special page */
 main#sp {
-  background: none;
   margin-top: 64px;
+  background: none;
+  position: relative;
+  z-index: 0;
 }
 main#sp::before {
-  background: no-repeat center/cover fixed url("../images/wallpaper-md.jpg");
+  background: url("../images/wallpaper-md.jpg") center center/cover no-repeat;
   content: "";
   height: calc(100vh - 64px);
   left: 0;
-  margin-top: 56px;
+  margin-top: 64px;
   position: fixed;
   top: 0;
   transform: translate3d(0, 0, -1px);
