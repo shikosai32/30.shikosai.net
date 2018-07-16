@@ -1,24 +1,75 @@
+@charset 'utf-8';
+
 body {
-  font-family: YuGothic, "Yu Gothic", san-serif;
+  font-family: "Helvetica Neue", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", YuGothic, YuGothicM, "Meiryo", san-serif;
+  letter-spacing: .1rem;
 }
 
-/* color */
-.sk-red {
-  background: #fff0ed;
+/* navbar */
+#navbar {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
-.sk-green {
-  background: #f6fcef;
+.nav-wrapper {
+  position: relative;
 }
-.sk-blue {
-  background: #f0f8ff;
+.brand-logo {
+  width: 6rem;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  right: 0;
 }
-.sk-3colors {
-  background: linear-gradient(to right, #fff0ed 0%, #fff0ed 40%, #f6fcef 40%, #f6fcef 60%, #f0f8ff 60%, #f0f8ff 100%);
+.brand-logo img {
+  width: 100%;
+  height: 48px;
+  margin: 8px auto;
+}
+
+/* scrolled until 100% */
+#navbar.unscrolled {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: unset !important;
+}
+/* #navbar.unscrolled .nav-wrapper ul li a, 
+#navbar.unscrolled #menuicon {
+  color: #333
+}*/
+#navbar.unscrolled .brand-logo {
+  transform: translateY(-200%);
+}
+
+/* scrolled with anim */
+#navbar.anim {
+  transition: all .3s ease;
+}
+/*
+#navbar.anim .nav-wrapper ul li a,
+#navbar.unscrolled #menuicon {
+  transition: color .25s ease;
+}
+*/
+#navbar.anim .brand-logo {
+  transition: transform .3s ease-in-out;
+}
+
+.special-page-link {
+  color: #000 !important;
+}
+
+/* top */
+#top-screen {
+  height: 100vh;
+  background: no-repeat center url("../images/wallpaper-top.jpg");
+  background-size: cover;
 }
 
 .logo {
-  font-family: YuMincho, "Yu Mincho", serif;
-  font-weight: bolder;
+  font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
+  font-weight: bold;
 }
 .logo h1 {
   margin: 1rem auto;
@@ -26,24 +77,366 @@ body {
 .logo h2,h3,p {
   margin: 0.25rem auto;
 }
-.parenthesis {
+#thanks-logo {
+  margin-top: 2rem; /* for centralized */
+}
+#thanks-logo img, #shikosai-textlogo img {
+  margin: .5rem auto;
+  max-width: 600px;
+  min-width: 300px;
+  width: 30%;
+}
+#shikosai-logo { /* XXX */
+  margin: 1rem auto;
+  max-width: 540px;
+  min-width: 280px;
+  width: 30%;
+}
+#shikosai-textlogo img {
+  width: 40%;
+}
+#date {
+  font-size: 2.5rem;
+}
+.bkt {
   font-size: 70%;
 }
-
+.kosen-text {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
 .scenery.row {
+  position: absolute;
+  bottom: 0;
   margin: 0;
 }
 .scenery.row .col {
   padding: 0;
 }
-
-nav .brand-logo {
-  margin-left: 1rem;
-  font-family: YuMincho, "Yu Mincho", serif;
+.scenery.row .col img {
+  vertical-align: bottom;
 }
-@media only screen and (max-width: 992px) {
-  nav .brand-logo {
+
+/* main-section */
+.main-section {
+  margin-bottom: 10rem;
+  width: 100%;
+}
+.main-section .row {
+  margin: 3rem 0;
+}
+
+/* section title */
+.section-title {
+  border-left: 1rem solid;
+  color: #4e4e4e;
+  font-size: 4rem;
+  letter-spacing: .2rem;
+  line-height: 8rem;
+  padding-left: 2rem;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+#top-about .section-title {
+  border-left-color: #F44335;
+}
+#top-message .section-title {
+  border-left-color: #4CAF50;
+}
+#top-access .section-title {
+  border-left-color: #2196F3;
+}
+.section-title::before {
+  font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
+  font-size: 10rem;
+  letter-spacing: .3rem;
+  line-height: 10rem;
+  position: absolute;
+  right: 0;
+  text-shadow: none;
+  top: -1rem;
+  z-index: -1;
+}
+#top-about .section-title::before {
+  content: "ABOUT";
+  color: #ffebee;
+}
+#top-message .section-title::before {
+  content: "MESSAGE";
+  color: #e8f5e9;
+}
+#top-access .section-title::before {
+  content: "ACCESS";
+  color: #e3f2fd;
+}
+
+/* section-text */
+.section-text {
+  color: #333;
+  font-size: 1.1rem;
+  letter-spacing: .1rem;
+  line-height: 2.2rem;
+}
+.section-text p {
+  margin: 2rem 0;
+}
+.section-text cite {
+  font-size: 1.2rem;
+  line-height: 2rem !important;
+}
+
+/* style each elememt of sections */
+.serif-text {
+  font-family: Georgia, "Times New Roman", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.nobr {
+  white-space: nowrap;
+}
+.gallery {
+  margin: 1rem 0;
+}
+.gallery .col {
+  padding: 0;
+  margin: 0;
+}
+.gallery img {
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+}
+table tr {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+table th {
+  text-align: center;
+}
+.icon-wrapper {
+  line-height: 2rem;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+.material-icons {
+  line-height: 2rem;
+  vertical-align: middle;
+}
+
+/* footer */
+.page-footer {
+  padding-top: 0 !important;
+}
+.page-footer * {
+  color: #333;
+}
+.page-footer h5 {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+/* special page */
+#sp {
+  background: none;
+  position: relative;
+  margin-top: 64px;
+  z-index: 0;
+}
+#sp::before {
+  background: url("../images/wallpaper-md.jpg") center center/cover no-repeat;
+  content: "";
+  height: calc(100vh - 64px);
+  left: 0;
+  margin-top: 64px;
+  position: fixed;
+  top: 0;
+  transform: translate3d(0, 0, -1px);
+  width: 100%;
+  z-index: -1;
+}
+#sp .main-section {
+  background: rgba(255,255,255,0.6);
+  margin: 0 5%;
+  padding: 2rem 0;
+  width: 90%;
+}
+#sp .section-title {
+  border: none;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  margin: 0 2rem;
+  padding: 0;
+  text-align: center;
+}
+#sp .section-text {
+  padding: 1rem 2rem !important;
+}
+#sp figure {
+  width: 100%;
+  margin: 0;
+}
+#sp figcaption {
+  text-align: center;
+}
+#sp .col {
+  padding: 1rem 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  #menuicon {
+    display: block;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+  }
+  .sidenav-trigger::before {
+    color: #333;
+    content: "MENU";
+    font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
+    font-size: 1.5rem;
+    left: 36px;
+    position: absolute;
+    top: 0;
+  }
+  .brand-logo {
+    margin: 0;
+  }
+  #navbar.unscrolled .brand-logo {
+    transform: translate(-50%, -200%);
+  }
+
+  #thanks-logo img, #shikosai-textlogo img {
+    max-width: 360px;
+    min-width: 300px;
+  }
+  #shikosai-logo { /* XXX */
+    max-width: 340px;
+    min-width: 260px;
+  }
+  #date {
+    margin: 1rem 0;
+  }
+  .kosen-text {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+  .section-title::before {
+    font-size: 8rem;
+    line-height: 8rem;
+    padding: 0;
+    top: -1rem;
+  }
+
+  table {
+    margin: 2rem 0;
+  }
+
+  /* special */
+  #sp .col {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  img, svg {
+    min-width: 0 !important;
+  }
+  .brand-logo img {
+    margin: 7px 0;
+    height: 42px;
+  }
+  #thanks-logo img, #shikosai-textlogo img {
+    max-width: 280px;
+    width: 100%;
+  }
+  #shikosai-logo {
+    max-width: 240px;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .main-section {
+    margin-bottom: 6rem;
+  }
+  .main-section .row {
+    margin: 0;
+  }
+  .section-title {
     font-size: 2rem;
-    margin-left: auto;
+    line-height: 4rem;
+    margin: 1.8rem 0;
+    padding-left: 1rem;
+    border-left-width: .5rem;
+  }
+  .section-title::before {
+    font-size: 4rem;
+    line-height: 4rem;
+    top: 0rem;
+  }
+  .section-text p {
+    margin: 1rem 0;
+  }
+
+  .page-footer h5 {
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+  }
+
+  /* special page */
+  #sp {
+    margin-top: 56px;
+  }
+  #sp::before {
+    height: calc(100vh - 56px);
+    margin-top: 56px;
+  }
+  #sp .main-section {
+    padding: 1rem 0;
+    min-height: calc(100vh - 56px);
+  }
+  #sp .section-title {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+  #sp .col {
+    padding: 1rem .2rem;
+  }
+}
+
+@media screen and (max-width: 360px) { /* for iPhone 5s, SE and earlier */
+  
+  .sidenav-trigger::before {
+    display: none;
+  }
+
+  #thanks-logo img {
+    width: 180px;
+  }
+  #shikosai-logo svg {
+    width: 200px;
+  }
+  #shikosai-textlogo img {
+    width: 180px;
+  }
+  h3#date {
+    font-size: 1.5rem;
+  }
+  .kosen-text {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+  }
+  .section-title::before {
+    font-size: 3rem;
   }
 }
