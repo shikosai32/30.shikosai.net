@@ -1,5 +1,23 @@
 # Shikosai_30
-茨香祭のwebサイト
+茨香祭のWebサイト<br>
+branch: st14d07
+
+### Ver 0.2
+- この版以降はcommitメッセージに変更点を記します。
+
+### Ver 0.12
+- ロゴ部のheightが100%になる仕様をデスクトップ向けにも反映
+- 背景画像をMaterial Design風のものに変更
+- ロゴ画像に影（縁取り）を追加
+- メニューバー上のイラストの地面が浮いてしまう問題を修正（各img要素にvertical-align:bottom付与）
+
+### Ver 0.11
+- 外部JS読み込みをbody直下からheadへ移し、defer属性付与
+- &lt;span&gt;の誤記を修正
+- base.cssの文字エンコード表記を追加
+- モバイルビュー向けの変更
+  - スクリーン横幅が480px以下となったときロゴ部のheightを100%にし、メニューボタンを表示
+  - メニューのタイトルを中央から左側に（メニューボタンの右側）
 
 
 > Materialize v1.0.0-beta (http://materializecss.com)  
