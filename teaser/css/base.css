@@ -236,13 +236,13 @@ table th {
 }
 
 /* special page */
-main#sp {
-  margin-top: 64px;
+#sp {
   background: none;
   position: relative;
+  margin-top: 64px;
   z-index: 0;
 }
-main#sp::before {
+#sp::before {
   background: url("../images/wallpaper-md.jpg") center center/cover no-repeat;
   content: "";
   height: calc(100vh - 64px);
@@ -254,13 +254,13 @@ main#sp::before {
   width: 100%;
   z-index: -1;
 }
-main#sp .main-section {
+#sp .main-section {
   background: rgba(255,255,255,0.6);
   margin: 0 5%;
   padding: 2rem 0;
   width: 90%;
 }
-main#sp .section-title {
+#sp .section-title {
   border: none;
   font-size: 2.5rem;
   line-height: 4rem;
@@ -268,17 +268,17 @@ main#sp .section-title {
   padding: 0;
   text-align: center;
 }
-main#sp .section-text {
+#sp .section-text {
   padding: 1rem 2rem !important;
 }
-main#sp figure {
+#sp figure {
   width: 100%;
   margin: 0;
 }
-main#sp figcaption {
+#sp figcaption {
   text-align: center;
 }
-main#sp .col {
+#sp .col {
   padding: 1rem 2rem;
 }
 
@@ -339,7 +339,7 @@ main#sp .col {
   }
 
   /* special */
-  main#sp .col {
+  #sp .col {
     padding: 1rem;
   }
 }
@@ -390,22 +390,22 @@ main#sp .col {
   }
 
   /* special page */
-  main#sp {
+  #sp {
     margin-top: 56px;
   }
-  main#sp::before {
+  #sp::before {
     height: calc(100vh - 56px);
     margin-top: 56px;
   }
-  main#sp .main-section {
+  #sp .main-section {
     padding: 1rem 0;
     min-height: calc(100vh - 56px);
   }
-  main#sp .section-title {
+  #sp .section-title {
     font-size: 1.8rem;
     line-height: 3rem;
   }
-  main#sp .col {
+  #sp .col {
     padding: 1rem .2rem;
   }
 }
