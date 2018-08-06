@@ -1,8 +1,8 @@
 # Shikosai_30
-茨香祭のWebサイト<br>
-branch: st14d07
+茨香祭のWebサイト
 
-### Ver 0.2
+<!--
+### Ver 0.2\
 - この版以降はcommitメッセージに変更点を記します。
 
 ### Ver 0.12
@@ -18,6 +18,7 @@ branch: st14d07
 - モバイルビュー向けの変更
   - スクリーン横幅が480px以下となったときロゴ部のheightを100%にし、メニューボタンを表示
   - メニューのタイトルを中央から左側に（メニューボタンの右側）
+-->
 
 
 > Materialize v1.0.0-beta (http://materializecss.com)  

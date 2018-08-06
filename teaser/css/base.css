@@ -200,10 +200,14 @@ body {
   padding: 0;
   margin: 0;
 }
-.gallery img {
+.gallery img.responsive-img {
   width: 90%;
   height: 90%;
   margin: 5%;
+}
+.gallery img.active {
+  margin: 0;
+  max-width: unset;
 }
 table tr {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
@@ -383,6 +387,9 @@ table th {
   .section-text p {
     margin: 1rem 0;
   }
+  .col.s12 {
+    margin: 1rem 0;
+  }
 
   .page-footer h5 {
     font-size: 1.1rem;
@@ -407,6 +414,26 @@ table th {
   }
   #sp .col {
     padding: 1rem .2rem;
+  }
+  #sp .gallery .col {
+    padding: 0;
+  }
+  #sp .gallery figure {
+    margin: 0;
+    position: relative;
+  }
+  #sp .gallery figure img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #sp .gallery figcaption {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    background: rgba(33, 33, 33, 0.5);
+    color: #fff;
+    line-height: 150%;
   }
 }
 
