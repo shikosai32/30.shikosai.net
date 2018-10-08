@@ -246,10 +246,6 @@ table th {
   vertical-align: bottom;
 }
 
-#top .main-section {
-  min-height: calc(100vh - 56px);
-} 
-
 #top .section-title {
   border-left: 1rem solid;
   color: #4e4e4e;
@@ -290,8 +286,12 @@ table th {
   font-size: 20px;
   height: 48px;
   line-height: 48px;
-  margin: 4vh 10%;
+  margin: 2rem 10%;
   width: 80%;
+}
+
+#top-pdf .card-action a {
+  color: #0d47a1;
 }
 
 /*** sub-page ***/
