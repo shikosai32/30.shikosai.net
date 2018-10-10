@@ -9,8 +9,6 @@ $(document).ready(function(){
   $('.table-of-contents').find('a').addClass(rand);
 });
 
-
-
 $('.collapsible-header').click(function() {
   if($(this).parent().hasClass('active')) {
     $(this).children('.material-icons').text("keyboard_arrow_down");
@@ -18,6 +16,7 @@ $('.collapsible-header').click(function() {
     $(this).children('.material-icons').text("keyboard_arrow_up");
   }
 });
+
 $(window).scroll(function() {
   if($(window).scrollTop() >= 800) {
     $('#scroll-to-top').fadeIn(100)
