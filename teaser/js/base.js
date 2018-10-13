@@ -3,10 +3,15 @@ $(document).ready(function(){
   $('.scrollspy').scrollSpy();
   $('.collapsible').collapsible();
   $('.materialboxed').materialbox();
+  scroll_to_top();
 
   var colors = ['red-border', 'green-border', 'blue-border'];
   var rand = colors[Math.floor(Math.random() * 3)];
   $('.table-of-contents').find('a').addClass(rand);
+});
+
+$(window).scroll(function() {
+  scroll_to_top();
 });
 
 $('.collapsible-header').click(function() {
@@ -17,19 +22,20 @@ $('.collapsible-header').click(function() {
   }
 });
 
-$(window).scroll(function() {
-  if($(window).scrollTop() >= 800) {
+function scroll_to_top () {
+  if($(window).scrollTop() > 800 && $(document).width() > 600) {
     $('#scroll-to-top').fadeIn(100)
   } else {
     $('#scroll-to-top').fadeOut(100);
   }
-});
+};
 
 $('a[href^="#"]').click(function() {
+  var headerHeight = $('#nav-mobile').outerHeight();
   var speed = 400;
   var href = $(this).attr("href");
   var target = $(href == "#" || href == "" ? 'html' : href);
-  var position = target.offset().top;
-  $('body, html').animate({scrollTop:position-72}, speed, 'swing');
+  var position = target.offset().top - headerHeight;
+  $('body, html').animate({scrollTop:position}, speed, 'swing');
   return false;
 });
