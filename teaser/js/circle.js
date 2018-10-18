@@ -4,11 +4,11 @@ var circleSort = new List(
 );
 
 $('.sort').click(function() {
-  $('.sort').not($(this)).children('.material-icons').text("");
+  $('.sort').not($(this)).find('.material-icons').text("");
   if($(this).hasClass('asc')) {
-    $(this).children('.material-icons').text("arrow_upward");
+    $(this).find('.material-icons').text("arrow_upward");
   } else if ($(this).hasClass('desc')) {
-    $(this).children('.material-icons').text("arrow_downward");
+    $(this).find('.material-icons').text("arrow_downward");
   }
 });
 

@@ -1,0 +1,600 @@
+@charset "UTF-8";
+body {
+  color: #333;
+  font-family: "Questrial", "Helvetica Neue", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", YuGothic, YuGothicM, "Meiryo", san-serif;
+  letter-spacing: .1rem; }
+
+/* Century_Gothic優先 */
+.logo-text {
+  font-family: "Century Gothic", "Questrial", "Helvetica Neue", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", YuGothic, YuGothicM, "Meiryo", san-serif; }
+
+/* 明朝体 */
+.serif-text {
+  font-family: Georgia, "Times New Roman", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif; }
+
+/* 太字 */
+.bold {
+  font-weight: bold; }
+
+/* 斜体 */
+.italic {
+  font-style: italic; }
+
+/* 極大 */
+.ultra-large {
+  font-size: 250%; }
+
+/* 超大 */
+.very-large {
+  font-size: 200%; }
+
+/* 大 */
+.large {
+  font-size: 150%; }
+
+/* 小 */
+.small {
+  font-size: 80%; }
+
+/* 微小 */
+.very-small {
+  font-size: 75%; }
+
+/* 下線 */
+.underline {
+  text-decoration: underline; }
+
+/* 赤線 */
+.red-border {
+  border-color: #F44336 !important; }
+
+/* 緑線 */
+.green-border {
+  border-color: #4CAF50 !important; }
+
+/* 青線 */
+.blue-border {
+  border-color: #2196F3 !important; }
+
+/* 改行しない */
+.nobr {
+  white-space: nowrap; }
+
+/* 外側余白なし */
+.no-margin {
+  margin: 0; }
+
+/* 内側余白なし */
+.no-padding {
+  padding: 0; }
+
+/* 左寄せ */
+.left-float {
+  float: left; }
+  .left-float > * {
+    margin: 0 2rem 1rem 0; }
+
+/* 右寄せ */
+.right-float {
+  float: right; }
+  .right-float > * {
+    margin: 0 0 1rem 2rem; }
+
+/* 寄せ解除 */
+.clear-float {
+  clear: both; }
+
+/* マウスを置いたときのアニメ */
+.hover-anim:hover {
+  opacity: .7;
+  transition: all 0.3s ease; }
+
+/* 画像拡大 */
+.responsive-img {
+  border-radius: 4px; }
+
+/* マーク付リスト */
+ul.marked-list {
+  margin-left: 2rem; }
+  ul.marked-list > ul {
+    margin-left: 2rem; }
+  ul.marked-list > li {
+    list-style-type: circle !important; }
+
+/* ナビバー(ヘッダ)の設定 */
+#navbar {
+  background-color: #fff;
+  height: 64px;
+  line-height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; }
+  #navbar .brand-logo {
+    height: 100%;
+    margin: auto; }
+    #navbar .brand-logo > img {
+      height: 40px;
+      margin: 12px 0 12px 1rem; }
+      #navbar .brand-logo > img.show-on-medium-and-down {
+        margin-left: 0; }
+  #navbar .sidenav-trigger {
+    height: 64px; }
+    #navbar .sidenav-trigger::before {
+      color: #333;
+      content: "MENU";
+      font-family: "Century Gothic", "Questrial", "Helvetica Neue", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", YuGothic, YuGothicM, "Meiryo", san-serif;
+      font-size: 1.5rem;
+      margin-left: 48px; }
+    #navbar .sidenav-trigger > #menuicon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 32px;
+      margin: 16px 8px;
+      width: 32px; }
+  #navbar #nav-mobile > li > a {
+    color: #333; }
+  #navbar #nav-mobile > li.active > a {
+    font-weight: bold !important; }
+  #navbar #nav-mobile > li.right-border {
+    border-right-width: 4px;
+    border-right-style: solid; }
+
+/* スマホ版メニューの設定 */
+#mobile-demo > li.bottom-border {
+  border-bottom-style: solid;
+  border-bottom-width: 4px; }
+
+#mobile-demo > li.mobile-navbar-logo {
+  height: 64px; }
+  #mobile-demo > li.mobile-navbar-logo > a {
+    border-bottom: 2px #c2c2c2 solid; }
+  #mobile-demo > li.mobile-navbar-logo img {
+    vertical-align: middle;
+    width: 100%; }
+
+#mobile-demo > li > a {
+  padding: 8px 32px;
+  height: 100%; }
+  #mobile-demo > li > a > .material-icons {
+    color: unset;
+    margin-right: 1rem; }
+
+#mobile-demo > li.active > a {
+  font-weight: bold !important; }
+
+/* セクションの設定 */
+.main-section > .section-title {
+  font-size: 3.5rem;
+  letter-spacing: .2rem;
+  text-shadow: 4px 4px 1px rgba(80, 80, 80, 0.2); }
+
+.main-section .section-text {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 2vh 0; }
+  .main-section .section-text > cite {
+    font-size: 1.3rem;
+    line-height: 2.2rem; }
+
+/* ギャラリー */
+.gallery {
+  margin: 4vh auto; }
+  .gallery > .col {
+    margin: 0;
+    padding: 0; }
+  .gallery .responsive-img {
+    margin: 2vh 5%;
+    width: 90%; }
+    .gallery .responsive-img.active {
+      margin: 0 !important;
+      max-width: unset; }
+
+/* 表の設定 */
+table {
+  margin: 4vh auto; }
+  table tr {
+    border-top: 1px solid rgba(0, 0, 0, 0.12); }
+    table tr > th {
+      text-align: center; }
+
+/* アイコンの設定 */
+.icon-wrapper, .icon-wrapper .material-icons {
+  line-height: 2rem;
+  vertical-align: bottom; }
+
+/* フッタの設定 */
+.page-footer * {
+  color: #333; }
+
+.page-footer #footer-logo {
+  width: 50%; }
+
+.page-footer #footer-kosen-logo {
+  height: 3rem;
+  width: 3rem;
+  margin-right: .2rem;
+  vertical-align: bottom; }
+
+.page-footer h5 {
+  font-size: 1.5rem;
+  letter-spacing: .05rem;
+  line-height: 3rem;
+  margin: 1rem 0;
+  vertical-align: text-bottom; }
+
+.page-footer .right-side-footer {
+  text-align: right; }
+
+#top #navbar.unscrolled {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: unset; }
+  #top #navbar.unscrolled .brand-logo {
+    transform: translateY(-200%); }
+
+#top #navbar.anim {
+  transition: all 0.3s ease; }
+  #top #navbar.anim .brand-logo {
+    transition: transform 0.5s ease; }
+
+#top #top-screen {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background: url("/30/images/bg/bg-top.jpg") center center/cover no-repeat scroll;
+  position: relative; }
+  #top #top-screen #thanks-logo {
+    margin: 2rem auto;
+    max-width: 400px;
+    min-width: 300px;
+    width: 30vw; }
+  #top #top-screen #shikosai-logo {
+    margin: 1rem auto;
+    max-width: 360px;
+    min-width: 280px;
+    width: 25vw; }
+  #top #top-screen .scenery {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    #top #top-screen .scenery > .col {
+      padding: 0; }
+      #top #top-screen .scenery > .col > img {
+        vertical-align: bottom; }
+
+#top .main-section > .section-title {
+  border-left: 12px solid;
+  height: 120px;
+  line-height: 120px;
+  padding-left: 2rem;
+  position: relative; }
+  #top .main-section > .section-title::before {
+    font-family: "Century Gothic", "Questrial", "Helvetica Neue", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", YuGothic, YuGothicM, "Meiryo", san-serif;
+    font-size: 120px;
+    line-height: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-shadow: none;
+    z-index: -1; }
+
+#top #top-about > .section-title::before {
+  color: #ffebee;
+  content: "THANKS!!"; }
+
+#top #top-enjoy > .section-title::before {
+  color: #e8f5e9;
+  content: "ENJOY!"; }
+
+#top #top-access > .section-title::before {
+  color: #e3f2fd;
+  content: "GO!"; }
+
+#top .view-more {
+  border-radius: 24px;
+  font-size: 20px;
+  height: 48px;
+  line-height: 48px;
+  margin: 2rem 10%;
+  width: 80%; }
+
+#top .twitter-iframe-wrapper > iframe.twitter-hashtag-button {
+  width: 200px !important;
+  height: 28px !important; }
+
+#top #top-pdf .card-action a, #top #top-pdf .card-action a:visited {
+  color: #2196F3; }
+
+.sub {
+  margin-top: 64px;
+  position: relative;
+  /* 小型端末におけるcontainer幅からコンテンツがはみ出る設定を削除 */ }
+  .sub::before {
+    content: "";
+    height: calc(100vh - 64px);
+    margin-top: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; }
+  .sub#about-page::before {
+    background: url("/30/images/bg/bg-about.jpg") center center/cover no-repeat fixed; }
+  .sub#timetable-page::before {
+    background: url("/30/images/bg/bg-timetable.jpg") center center/cover no-repeat fixed; }
+  .sub#special-page::before {
+    background: url("/30/images/bg/bg-special.jpg") center center/cover no-repeat fixed; }
+  .sub#access-page::before {
+    background: url("/30/images/bg/bg-access.jpg") center center/cover no-repeat fixed; }
+  .sub .main-section {
+    margin: 5vh 0 10vh; }
+    .sub .main-section > .section-title {
+      line-height: 6rem;
+      margin: 0 0 3vh;
+      text-align: center; }
+  .sub .col > .row {
+    margin: 0; }
+  .sub .gallery figure {
+    background-color: rgba(250, 250, 250, 0.3);
+    border-radius: 6px;
+    margin: 4px 5%;
+    padding: 1rem 0 0;
+    width: 90%; }
+    .sub .gallery figure img {
+      margin: 0 10% 1rem;
+      width: 80%; }
+    .sub .gallery figure > figcaption {
+      font-size: 80%;
+      font-weight: bold;
+      line-height: 120%;
+      padding: 1rem;
+      text-align: center;
+      width: 100%; }
+  .sub .right-col {
+    margin-top: 5vh; }
+    .sub .right-col > .pinned {
+      position: fixed; }
+      .sub .right-col > .pinned > ul.table-of-contents > ul {
+        padding-left: 1.6rem; }
+      .sub .right-col > .pinned > ul.table-of-contents > li > a.active {
+        border-left: 4px solid;
+        font-weight: bold; }
+      .sub .right-col > .pinned > ul.table-of-contents > li > a:hover {
+        border-left-width: 2px; }
+
+#timetable-page .timetable {
+  table-layout: fixed; }
+  #timetable-page .timetable th {
+    font-size: 1.2rem;
+    font-weight: normal;
+    vertical-align: 0%;
+    height: 2rem; }
+  #timetable-page .timetable > thead th {
+    background-color: #e5e5e5;
+    vertical-align: middle; }
+  #timetable-page .timetable .time-col {
+    width: 10%; }
+  #timetable-page .timetable .onstage-col, #timetable-page .timetable .live-col {
+    width: 45%; }
+  #timetable-page .timetable td {
+    height: 2rem; }
+    #timetable-page .timetable td > .card {
+      margin: 0;
+      height: 100%; }
+      #timetable-page .timetable td > .card.red-grad {
+        background-color: #F44336;
+        background: linear-gradient(135deg, #ff7c6e, #f5317f); }
+      #timetable-page .timetable td > .card.green-grad {
+        background-color: #4CAF50;
+        background: linear-gradient(135deg, #81C784, #43A047); }
+      #timetable-page .timetable td > .card.blue-grad {
+        background-color: #2196F3;
+        background: linear-gradient(135deg, #59c2ff, #1270e3); }
+      #timetable-page .timetable td > .card .card-title {
+        font-size: 1.8rem;
+        margin-bottom: 0 !important; }
+      #timetable-page .timetable td > .card .event-time {
+        font-size: 1.2rem;
+        line-height: 2rem; }
+      #timetable-page .timetable td > .card .collapsible {
+        border: none; }
+        #timetable-page .timetable td > .card .collapsible .collapsible-header, #timetable-page .timetable td > .card .collapsible .collapsible-body {
+          background-color: #fff;
+          color: #333; }
+        #timetable-page .timetable td > .card .collapsible .collapsible-header {
+          white-space: nowrap;
+          box-shadow: inherit;
+          line-height: 2rem;
+          justify-content: space-between; }
+          #timetable-page .timetable td > .card .collapsible .collapsible-header .material-icons {
+            margin: 0; }
+
+@-moz-document url-prefix() {
+  #timetable-page .timetable td > .card {
+    height: auto; }
+  .circle-list-wrapper .collapsible-header {
+    font-size: 16px;
+    line-height: 2rem; } }
+
+#circle-page #scroll-to-top {
+  display: none;
+  margin: 0 32px 32px 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10; }
+
+#circle-page #circle-list-wrapper > .collapsible .collapsible-header {
+  font-size: 18px; }
+
+#circle-page #circle-list-wrapper > #circle-list {
+  table-layout: fixed; }
+  #circle-page #circle-list-wrapper > #circle-list th {
+    min-width: 6rem;
+    line-height: 2rem; }
+  #circle-page #circle-list-wrapper > #circle-list thead th {
+    white-space: nowrap; }
+  #circle-page #circle-list-wrapper > #circle-list .kind-col {
+    width: 20%; }
+  #circle-page #circle-list-wrapper > #circle-list .name-col {
+    width: 30%; }
+  #circle-page #circle-list-wrapper > #circle-list .owner-col {
+    width: 10%; }
+  #circle-page #circle-list-wrapper > #circle-list .location-col {
+    width: 10%; }
+  #circle-page #circle-list-wrapper > #circle-list .description-col {
+    width: 30%; }
+  #circle-page #circle-list-wrapper > #circle-list .sort > .material-icons {
+    font-size: 16px;
+    line-height: 2rem; }
+  #circle-page #circle-list-wrapper > #circle-list td {
+    text-align: center; }
+  #circle-page #circle-list-wrapper > #circle-list td.location {
+    color: #2196F3;
+    cursor: pointer; }
+
+#circle-page #circle-list-wrapper #search-empty {
+  display: none; }
+
+#circle-page #map-highlight {
+  display: none;
+  margin: 0 0 32px 32px;
+  max-width: 500px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  z-index: 10; }
+  #circle-page #map-highlight > #highlight-img {
+    border-radius: 8px;
+    width: 100%; }
+  #circle-page #map-highlight > #highlight-close {
+    border-radius: 0 8px 0 8px;
+    cursor: pointer;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px; }
+    #circle-page #map-highlight > #highlight-close .material-icons {
+      color: #fff;
+      font-size: 36px;
+      line-height: 48px;
+      margin: 0 6px; }
+
+@media screen and (max-width: 992px) {
+  .page-footer .right-side-footer {
+    text-align: left; }
+  #top #navbar .brand-logo {
+    margin: 0; }
+  #top #navbar.unscrolled .brand-logo {
+    transform: translate(-50%, -200%); }
+  #top .main-section > .section-title {
+    border-left-width: .8rem;
+    font-size: 6vw;
+    height: 15vw;
+    line-height: 15vw;
+    padding-left: 1.2rem; }
+    #top .main-section > .section-title::before {
+      font-size: 15vw;
+      line-height: 15vw; }
+  #circle-page #circle-list-wrapper > #circle-list th {
+    min-width: 4rem; } }
+
+@media screen and (max-width: 600px) {
+  .large {
+    font-size: 130%; }
+  .very-large {
+    font-size: 160%; }
+  .ultra-large {
+    font-size: 200%; }
+  .left-float, .right-float {
+    float: none; }
+  .left-float *, .right-float * {
+    margin: 0; }
+  .section-text {
+    font-size: 1.1rem;
+    margin: 1rem 0; }
+  .page-footer #footer-logo {
+    width: 75%; }
+  #top #top-screen #thanks-logo, #top #top-screen #shikosai-logo {
+    max-width: 280px;
+    min-width: unset;
+    width: 70%; }
+  #top .main-section > .section-title {
+    font-size: 2.5rem;
+    height: unset;
+    line-height: 3.5rem;
+    padding: 3vw 0 3vw 1.2rem; }
+    #top .main-section > .section-title::before {
+      line-height: unset;
+      font-size: 4rem;
+      bottom: 0;
+      top: unset; }
+  .sub .main-section > .section-title {
+    padding: 0;
+    font-size: 9vw;
+    height: unset;
+    letter-spacing: .1rem;
+    line-height: 4rem; }
+  .sub .main-section .gallery > .col {
+    padding: 0; }
+  .sub .main-section .gallery figure .responsive-img {
+    height: 100%; }
+  #timetable-page .timetable .time-col {
+    display: none; }
+  #timetable-page .timetable .onstage-col, #timetable-page .timetable .live-col {
+    width: 50%; }
+  #timetable-page .timetable td, #timetable-page .timetable th {
+    padding: 5px; }
+  #timetable-page .timetable td > .card .card-title {
+    font-size: 1.3rem;
+    line-height: 1.8rem; }
+  #timetable-page .timetable td > .card .card-content {
+    padding: 12px; }
+  #timetable-page .timetable td > .card .event-time {
+    font-size: 1rem;
+    line-height: 2rem; }
+  #timetable-page .timetable td > .card .collapsible {
+    border-top: 1px #e5e5e5 solid;
+    box-shadow: none;
+    margin: 1rem auto auto;
+    transform: translate(-12px, 12px);
+    width: calc(100% + 24px); }
+    #timetable-page .timetable td > .card .collapsible .collapsible-header, #timetable-page .timetable td > .card .collapsible .collapsible-body {
+      background-color: transparent;
+      color: #fff; }
+    #timetable-page .timetable td > .card .collapsible .collapsible-body {
+      padding: 1rem; }
+  #circle-page #scroll-to-top {
+    margin: 0 16px 16px 0; }
+  #circle-page #circle-list-wrapper > #circle-list {
+    font-size: 12px; }
+    #circle-page #circle-list-wrapper > #circle-list .description-col, #circle-page #circle-list-wrapper > #circle-list .description {
+      display: none; }
+    #circle-page #circle-list-wrapper > #circle-list .kind-col {
+      width: 20%; }
+    #circle-page #circle-list-wrapper > #circle-list .name-col {
+      width: 40%; }
+    #circle-page #circle-list-wrapper > #circle-list .owner-col {
+      width: 20%; }
+    #circle-page #circle-list-wrapper > #circle-list .location-col {
+      width: 20%; }
+  #circle-page #map-highlight {
+    margin: 0 0 16px 16px;
+    max-width: unset;
+    width: 70%; } }
+
+@media screen and (max-width: 360px) {
+  .sidenav-trigger::before {
+    display: none; }
+  #top #top-screen #thanks-logo, #top #top-screen #shikosai-logo {
+    max-width: unset; }
+  .sub .main-section {
+    margin-bottom: 4rem; }
+    .sub .main-section .section-title {
+      font-size: 2rem; }
+  #timetable-page .timetable th {
+    font-size: 1rem; } }

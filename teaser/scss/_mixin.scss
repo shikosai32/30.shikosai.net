@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+@mixin def_transition($target: all, $sec: .3s) {
+  transition: $target $sec ease;
+}
+@mixin bg($url, $scroll: fixed) {
+  background: url($url) center center /cover no-repeat $scroll;
+}
+@mixin fixed($param1: "top", $param2: "left") {
+  position: fixed;
+  #{$param1}: 0;
+  #{$param2}: 0;
+}
+@mixin absolute($param1: "top", $param2: "left") {
+  position: absolute;
+  #{$param1}: 0;
+  #{$param2}: 0;
+}

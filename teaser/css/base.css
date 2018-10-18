@@ -26,6 +26,8 @@ body {
 /* navbar */
 #navbar {
   background-color: #fff;
+  height: 64px;
+  line-height: 64px;
   position: fixed;
   top: 0;
   left: 0;
@@ -41,6 +43,29 @@ body {
 .brand-logo img {
   height: 40px;
   margin: 12px 0 12px 1rem;
+}
+
+nav .sidenav-trigger {
+  height: 64px;
+}
+.sidenav-trigger::before {
+  color: #333;
+  content: "MENU";
+  font-family: "Century Gothic", 'Questrial' YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
+  font-size: 1.5rem;
+  left: 0;
+  position: absolute;
+  margin-left: 36px;
+  top: 0;
+}
+#menuicon {
+  display: block;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  margin: auto;
 }
 
 /* for PC navbar */
@@ -78,45 +103,31 @@ body {
 #mobile-demo .active a {
   font-weight: bold !important;
 }
-#mobile-demo .material-icons { color: unset;}
-#mobile-demo .material-icons.left { margin-right: 1.2rem; }
-.table-of-contents li a.active {
-  border-left: 4px solid;
-  font-weight: bold;
-}
-.table-of-contents li a:hover {
-  border-left-width: 2px !important;
-}
+#mobile-demo .material-icons { color: unset; margin-right: 1rem !important;}
 .red-border { border-color: #F44336 !important; }
 .green-border { border-color: #4CAF50 !important; }
 .blue-border { border-color: #2196F3 !important; }
 
-
 .section-title {
   font-size: 3.5rem;
   letter-spacing: .2rem;
-  position: relative;
-  text-shadow: 1px 1px 2px rgba(52, 52, 52, 0.2);
+  text-shadow: 4px 4px 1px rgba(80, 80, 80, 0.2);
 }
 
 /* section-text */
 .section-text {
-  color: #333;
-  letter-spacing: .1rem;
-}
-.section-text p {
-  font-size: 130%;
-  line-height: 200%;
-  margin: 1rem 0;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 2vh 0;
 }
 .section-text > ul,
 .section-text .row .col ul {
-  font-size: 120%;
+  font-size: 1.2rem;
   line-height: 200%;
 }
 .section-text cite {
-  font-size: 1.2rem;
-  line-height: 2rem !important;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 /*** 一般 ***/
@@ -133,7 +144,7 @@ body {
 
 .hover-anim:hover {
   opacity: .7;
-  transition: opacity .1s linear;
+  transition: all .3s linear;
 }
 
 /* 箇条マークありリスト */
@@ -141,7 +152,7 @@ body {
 .marked-list li { list-style-type: circle !important; }
 
 .materialboxed {
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 table {
@@ -149,7 +160,7 @@ table {
 }
 
 .gallery {
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
 .gallery .col {
   padding: 0;
@@ -157,8 +168,7 @@ table {
 }
 .gallery .responsive-img {
   width: 90%;
-  height: 90%;
-  margin: 5%;
+  margin: 2vh 5%;
 }
 .gallery img.active {
   margin: 0 !important;
@@ -222,20 +232,19 @@ table th {
   transition: all .3s ease;
 }
 #navbar.anim .brand-logo {
-  transition: transform .3s ease-in-out;
+  transition: all .3s ease;
 }
 
 /* トップページ最上部 */
 #top-screen {
   height: 100vh;
-  background: no-repeat center url("/30/images/bg/bg-top.jpg");
+  height: calc(var(--vh, 1vh) * 100);
+  background: url("/30/images/bg/bg-top.jpg") center center /cover no-repeat scroll;
   background-size: cover;
 }
+
 #thanks-logo {
-  margin-top: 2rem;
-}
-#thanks-logo img {
-  margin: 1rem auto;
+  margin: 2rem auto;
   max-width: 400px;
   min-width: 300px;
   width: 30vw;
@@ -244,11 +253,12 @@ table th {
   margin: 1rem auto;
   max-width: 360px;
   min-width: 280px;
-  width: 40%;
+  width: 25vw;
 }
 .scenery.row {
   position: absolute;
   bottom: 0;
+  right: 0;
   margin: 0;
 }
 .scenery.row .col {
@@ -259,21 +269,16 @@ table th {
 }
 
 #top .section-title {
-  border-left: 1rem solid;
-  color: #4e4e4e;
+  border-left: 12px solid;
   height: 120px;
-  letter-spacing: .3rem;
   line-height: 120px;
   padding-left: 2rem;
   position: relative;
-  text-shadow: 2px 2px 4px rgba(33, 33, 33, 0.12);
-  z-index: 0;
 }
 
 #top .section-title::before {
   font-family: "Century Gothic", YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
   font-size: 120px;
-  letter-spacing: .5rem;
   line-height: 120px;
   position: absolute;
   right: 0;
@@ -309,17 +314,15 @@ table th {
 .sub {
   position: relative;
   margin-top: 64px;
-  z-index: 0;
 }
 .sub::before {
-  background: center center/cover no-repeat;
+  background: center center /cover no-repeat fixed;
   content: "";
   height: calc(100vh - 64px);
   left: 0;
   margin-top: 64px;
   position: fixed;
   top: 0;
-  transform: translate3d(0, 0, -1px);
   width: 100%;
   z-index: -1;
 }
@@ -362,6 +365,13 @@ table th {
 .table-of-contents ul {
   padding-left: 1.6rem;
 }
+.table-of-contents > li > a.active {
+  border-left: 4px solid;
+  font-weight: bold;
+}
+.table-of-contents > li > a:hover {
+  border-left-width: 2px;
+}
 
 
 /*** background ***/
@@ -373,7 +383,7 @@ table th {
 #access-page::before { background-image: url('/30/images/bg/bg-access.jpg'); }
 
 /* timetable page */
-.timetable tr, .timetable td {
+.timetable th {
   height: 2rem;
 }
 .timetable .time-col {
@@ -383,16 +393,12 @@ table th {
   width: 45%;
 }
 .timetable th {
-  color: #6e6e6e;
   font-weight: normal;
   font-size: 1.2rem;
-  height: calc(24rem + 11px) !important;
   vertical-align: 0%;
 }
 .timetable thead th {
-  background-color: rgba(233, 233, 233, 0.6);
-  color: #333;
-  height: 2rem !important;
+  background-color: #c2c2c2;
   vertical-align: middle;
 }
 .timetable .card {
@@ -410,7 +416,7 @@ table th {
 }
 .card.green-grad {
   background-color: #54d169;
-  background: linear-gradient(135deg, #9fe56a,#54d169);
+  background: linear-gradient(135deg, #81C784,#43A047);
 }
 .card.blue-grad {
   background-color: #1270e3;
@@ -445,8 +451,7 @@ table th {
   display:none;
 }
 #circle-list-wrapper .collapsible-header {
-  font-size: 16px;
-  line-height: 2rem;
+  font-size: 20px;
 }
 #circle-list {
   width: 100% !important;
@@ -481,8 +486,8 @@ table th {
   position: fixed;
   bottom: 1rem;
   left: 1rem;
-  max-width: 60%;
-  width: 500px;
+  width: 60%;
+  max-width: 500px;
   z-index: 10;
 }
 #highlight-img {
@@ -495,35 +500,17 @@ table th {
   width: 48px;
   height: 48px;
   right: 0;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 0 8px 0 8px;
   cursor: pointer;
 }
 #highlight-close .material-icons {
+  font-size: 36px;
   line-height: 48px;
-  font-size: 48px;
   color: #fff;
+  margin: 0 6px;
 }
 
 @media screen and (max-width: 992px) {
-  #menuicon {
-    display: block;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    margin: auto;
-  }
-  .sidenav-trigger::before {
-    color: #333;
-    content: "MENU";
-    font-family: "Century Gothic", 'Questrial' YuGothicM, YuGothic, "Hiragino Kaku Gothic ProN", "Meiryo", san-serif;
-    font-size: 1.5rem;
-    left: 36px;
-    position: absolute;
-    top: 0;
-  }
   .brand-logo {
     margin: 0;
   }
@@ -567,6 +554,7 @@ table th {
   img, svg {
     min-width: 0 !important;
   }
+  /*
   .brand-logo img {
     margin: 7px 0;
     height: 42px;
@@ -574,6 +562,7 @@ table th {
   table tbody th {
     width: 8rem;
   }
+  */
   .section-text p {
     font-size: 110%;
     margin: 1rem 0;

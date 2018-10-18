@@ -9,7 +9,6 @@
   <meta name="msapplication-TileColor" content="#da532c">
   
   <script defer src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script defer src="/30/js/load.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script defer src="/30/js/base.js"></script>
   <script defer src="/30/js/top.js"></script>
@@ -17,7 +16,7 @@
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Questrial">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <link rel="stylesheet" href="/30/css/base.css">
+  <link rel="stylesheet" href="/30/css/main.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/30/images/favicon//apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/30/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/30/images/favicon//android-chrome-192x192.png">
@@ -53,20 +52,18 @@
     <!-- for SP -->
     <ul class="sidenav" id="mobile-demo">
       <li class="mobile-navbar-logo"><a href="index.html"><img src="/30/images/logo/full-logo.svg"></a></li>
-      <li class="bottom-border red-border"><a href="about.html"><i class="material-icons left">info</i>茨香祭とは？</a></li>
-      <li class="bottom-border green-border"><a href="timetable.html"><i class="material-icons left">event</i>タイムテーブル</a></li>
-      <li class="bottom-border blue-border"><a href="special.html"><i class="material-icons left">star</i>第30回記念イベント</a></li>
-      <li><a href="access.html"><i class="material-icons left">commute</i>アクセス</a></li>
-      <li class="hover-anim"><a href="circle.html" class="blue z-depth-1 white-text"><i class="material-icons left">search</i>サークル検索</a></li>
+      <li class="bottom-border red-border"><a href="about.html"><i class="material-icons">info</i>茨香祭とは？</a></li>
+      <li class="bottom-border green-border"><a href="timetable.html"><i class="material-icons">event</i>タイムテーブル</a></li>
+      <li class="bottom-border blue-border"><a href="special.html"><i class="material-icons">star</i>第30回記念イベント</a></li>
+      <li><a href="access.html"><i class="material-icons">commute</i>アクセス</a></li>
+      <li class="hover-anim"><a href="circle.html" class="blue z-depth-1 white-text"><i class="material-icons">search</i>サークル検索</a></li>
     </ul>
   </header>
 
   <main>
-    <div id="top-screen" class="valign-wrapper sanserif-text">
+    <div id="top-screen" class="valign-wrapper logo-text">
       <div class="container center-align bold">
-        <h1 id="thanks-logo">
-          <img src="/30/images/logo/thanks.svg" alt="thanks-logo" class="responsive-img">
-        </h1>
+        <img id="thanks-logo" src="/30/images/logo/thanks.svg" alt="thanks-logo" class="responsive-img">
         <div id="shikosai-logo">
           <?xml version="1.0" encoding="utf-8"?>
           <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -165,7 +162,7 @@
             />
           </svg>
         </div>
-        <h2 class="very-large bold"><span class="nobr">茨城高専</span> <span class="nobr">第30回</span><span class="nobr">茨香祭</span></h2>
+        <h1 class="very-large bold"><span class="nobr">茨城高専</span> <span class="nobr">第30回</span><span class="nobr">茨香祭</span></h1>
         <h3 class="ultra-large">
           <span class="nobr"><span class="small">2018/10/</span>20<span class="small">[sat]</span>-21<span class="small">[sun]</span></span>
           <span class="nobr"><span class="small">AM</span>10:00-<span class="small">PM</span>4:00</span>
@@ -186,32 +183,33 @@
     <section id="top-about" class="main-section container">
       <h2 class="section-title red-border">茨香祭はついに30回目!</h2>
       <div class="row">
-        <div class="section-text col l8 m7 s12">
-          <p>
+        <div class="col l8 m7 s12">
+          <p class="section-text">
             茨城高専が1964年に創立されて以来50年以上にわたり続いてきた文化祭『<span class="bold">茨香祭</span>(しこうさい)』は、今年でついに記念すべき30回目!
           </p>
-          <p>
+          <p class="section-text">
             今年の茨香祭のテーマは『<span class="bold">XXX -Thanks!!-</span>』。普段私たちがお世話になっている方々、茨香祭を支援してくださる教職員の方々、ならびに地域のみなさまに感謝を込めて、華々しい茨香祭を作り上げたいと考えておりますので、みなさまのご来場を心よりお待ちしております！
           </p>
         </div>
         <div class="col l4 m5 s8 offset-s2">
           <img src="/30/images/poster.jpg" class="responsive-img materialboxed z-depth-1" alt="第28回茨香祭">
         </div>
-        <a class="waves-effect waves-light btn red lighter-1 view-more" href="about.html">VIEW MORE</a>
       </div>
+      <a class="waves-effect waves-light btn red lighter-1 view-more" href="about.html">VIEW MORE</a>
     </section>
     <section id="top-enjoy" class="main-section container">
       <h2 class="section-title green-border">茨香祭を楽しむ!</h2>
       <div class="row">
-        <div class="section-text col l8 m7 s12">
-          <p>
-            今年も他校の文化祭にはない高専らしい模擬店やイベントが盛りだくさん。TwitterやInstagramなどのSNSでシェアして盛り上がろう！茨香祭公式Twitterでも盛り上がりの様子を中継します！
+        <div class="col l7 m6 s12">
+          <p class="section-text">
+            今年も他校の文化祭にはない高専らしい模擬店やイベントが盛りだくさん。TwitterやInstagramなどのSNSでシェアして盛り上がろう！<a href="//twitter.com/NITIbC_shikosai" target="_blank">茨香祭公式Twitter</a>でも盛り上がりの様子を中継します！
           </p>
-          <p>
+          <p class="section-text">
             茨香祭30回目を記念して、オリジナルラバーバンドの販売や打ち上げ花火を行います。今年しか味わえない感動を体験しよう！
           </p>
         </div>
-        <div class="col l4 m5 s8 offset-s2">
+        <div class="col l5 m6 s12 twitter-iframe-wrapper">
+          <a href="https://twitter.com/intent/tweet?button_hashtag=茨香祭&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #茨香祭</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <a class="twitter-timeline" data-height="400" href="//twitter.com/NITIbC_shikosai?ref_src=twsrc%5Etfw">Tweets by NITIbC_shikosai</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         <a class="waves-effect waves-light btn green lighter-1 view-more" href="timetable.html">Timetable</a>

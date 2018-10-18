@@ -9,14 +9,13 @@
   <meta name="msapplication-TileColor" content="#da532c">
 
   <script defer src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script defer src="/30/js/load.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script defer src="/30/js/base.js"></script>
 
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Questrial">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <link rel="stylesheet" href="/30/css/base.css">
+  <link rel="stylesheet" href="/30/css/main.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/30/images/favicon//apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/30/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/30/images/favicon//android-chrome-192x192.png">
@@ -51,11 +50,11 @@
     <!-- for SP -->
     <ul class="sidenav" id="mobile-demo">
       <li class="mobile-navbar-logo"><a href="index.html"><img src="/30/images/logo/full-logo.svg"></a></li>
-      <li class="bottom-border red-border"><a href="about.html"><i class="material-icons left">info</i>茨香祭とは？</a></li>
-      <li class="bottom-border green-border"><a href="timetable.html"><i class="material-icons left">event</i>タイムテーブル</a></li>
-      <li class="bottom-border blue-border active"><a href="special.html"><i class="material-icons left">star</i>第30回記念イベント</a></li>
-      <li><a href="access.html"><i class="material-icons left">commute</i>アクセス</a></li>
-      <li class="hover-anim"><a href="circle.html" class="blue z-depth-1 white-text"><i class="material-icons left">search</i>サークル検索</a></li>
+      <li class="bottom-border red-border"><a href="about.html"><i class="material-icons">info</i>茨香祭とは？</a></li>
+      <li class="bottom-border green-border"><a href="timetable.html"><i class="material-icons">event</i>タイムテーブル</a></li>
+      <li class="bottom-border blue-border active"><a href="special.html"><i class="material-icons">star</i>第30回記念イベント</a></li>
+      <li><a href="access.html"><i class="material-icons">commute</i>アクセス</a></li>
+      <li class="hover-anim"><a href="circle.html" class="blue z-depth-1 white-text"><i class="material-icons">search</i>サークル検索</a></li>
     </ul>
   </header>
 
@@ -64,79 +63,86 @@
       <div class="col l10 m12 s12">
         <section id="wristband-section" class="main-section scrollspy">
           <h2 class="section-title">ラバーバンド販売</h2>
-          <div class="section-text">
-            <p>
-              茨香祭開催30回の節目を記念して、茨香祭史上初の試みとしてラバーバンドを茨香祭本部テント(正門奥)にて販売いたします。(A)校内でバンドデザインを募集しTwitter投票で最多票を獲得したものと、(B)茨香祭実行委員が制作したものの2種が販売されます。ライブイベントなどで着用すると盛り上がること間違いなし！
-            </p>
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th class="white black-text">(A)校内応募モデル</th>
-                  <th class="black white-text">(B)実行委員制作モデル</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th class="center-align">本体色</th>
-                  <td class="center-align">ホワイト</td>
-                  <td class="center-align">ブラック</td>
-                </tr>
-                <tr>
-                  <th class="center-align">長さ</th>
-                  <td colspan="2" class="center-align">各種202mm</td>
-                </tr>
-                <tr>
-                  <th class="center-align">幅</th>
-                  <td class="center-align">15mm</td>
-                  <td class="center-align">20mm</td>
-                </tr>
-                <tr>
-                  <th class="center-align">厚さ</th>
-                  <td colspan="2" class="center-align">各種2.5mm</td>
-                </tr>
-                <tr>
-                  <th class="center-align">価格</th>
-                  <td colspan="2" class="center-align">各種500円</td>
-                </tr>
-              </tbody>
-            </table>
+          <p class="section-text">
+            茨香祭開催30回の節目を記念して、茨香祭史上初の試みとしてラバーバンドを茨香祭本部テント(正門奥)にて販売いたします。(A)校内でバンドデザインを募集しTwitter投票で最多票を獲得したものと、(B)茨香祭実行委員が制作したものの2種が販売されます。ライブイベントなどで着用すると盛り上がること間違いなし！
+          </p>
+          <table class="white">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="cyan lighten-5 black-text">(A)校内応募モデル</th>
+                <th class="black white-text">(B)実行委員制作モデル</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="center-align">本体色</th>
+                <td class="center-align">ホワイト</td>
+                <td class="center-align">ブラック</td>
+              </tr>
+              <tr>
+                <th class="center-align">長さ</th>
+                <td colspan="2" class="center-align">各種202mm</td>
+              </tr>
+              <tr>
+                <th class="center-align">幅</th>
+                <td class="center-align">15mm</td>
+                <td class="center-align">20mm</td>
+              </tr>
+              <tr>
+                <th class="center-align">厚さ</th>
+                <td colspan="2" class="center-align">各種2.5mm</td>
+              </tr>
+              <tr>
+                <th class="center-align">価格</th>
+                <td colspan="2" class="center-align">各種500円</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <div class="row gallery">
+          <div class="col l6 m6 s12">
+            <figure class="z-depth-2">
+              <img src="/30/images/wristband/wristband.jpg" class="responsive-img materialboxed z-depth-2" alt="ラバーバンド1">
+              <figcaption>ラバーバンド (全2種)</figcaption>
+            </figure>
           </div>
-          <div class="row gallery">
-            <div class="col l6 m12 s12">
-              <figure class="z-depth-2">
-                <img src="/30/images/wristband/wristband.jpg" class="responsive-img materialboxed z-depth-2" alt="ラバーバンド1">
-                <figcaption>ラバーバンド (全2種)</figcaption>
-              </figure>
-            </div>
-            <div class="col l6 m12 s12">
-              <figure class="z-depth-2">
-                <img src="/30/images/wristband/wristband-collage.jpg" class="responsive-img materialboxed z-depth-2" alt="ラバーバンド2">
-                <figcaption>本体イメージ (ハメコミ合成のため実物とは異なります)</figcaption>
-              </figure>
-            </div>
+          <div class="col l6 m6 s12">
+            <figure class="z-depth-2">
+              <img src="/30/images/wristband/wristband-collage.jpg" class="responsive-img materialboxed z-depth-2" alt="ラバーバンド2">
+              <figcaption>本体イメージ (ハメコミ合成のため実物とは異なります)</figcaption>
+            </figure>
+          </div>
 
-          </div>
+        </div>
         </section>
         <section id="fireworks-section" class="main-section scrollspy">
           <h2 class="section-title">打ち上げ花火</h2>
-          <div class="section-text">
-            <p>
-              こちらも茨香祭史上初！茨香祭のクライマックスを飾る花火大会を行います！茨香祭最後の思い出としてぜひご覧ください！
-            </p>
-            <ul class="marked-list">
-              <li>開催日時: <span class="bold underline">10月21日(日) PM7:45 - PM8:00</span> (15分間)</li>
-                <ul>
-                  <li>※10/18時点で21日が雨天予想の場合は20日に前倒して開催いたします。18日に<a href="//twitter.com/NITIbC_shikosai" target="_blank">公式Twitter</a>にて、最終的な開催日をお知らせします。</li>
-                </ul>
-              <li>開催場所: 本校グラウンド</li>
-              <li>入場: 一般来場者の方はPM7:00からグラウンド付近の観覧席へご入場ください。</li>
-              <ul>
-                <li class="underline">一般公開終了後(PM4:00)、打ち上げ準備のため駐車場を閉鎖いたします。自家用車でお越しの方は、お早めの車のご移動をお願いいたします。</li>
-                <li>花火大会時の駐車場は学寮宿舎付近となります。スペースに余裕が無いため、花火をご覧になる方はなるべく公共交通機関をご利用ください。</li>
-              </ul>
-            </ul>      
-          </div>
+          <p class="section-text">
+            こちらも茨香祭史上初！茨香祭のクライマックスを飾る花火大会を行います！茨香祭最後の思い出としてぜひご覧ください！
+          </p>
+          <table class="white">
+            <tr>
+              <th class="nobr"><span class="icon-wrapper"><i class="material-icons">calendar_today</i>開催日時</span></th>
+              <td>10月21日(日) PM7:45 - PM8:00</span> (15分間)<br>
+                10/18時点で21日が雨天予報の場合は20日に前倒して開催いたします。18日に<a href="//twitter.com/NITIbC_shikosai" target="_blank">公式Twitter</a>にて、最終的な開催日をお知らせします。</td>
+            </tr>
+            <tr>
+              <th class="nobr"><span class="icon-wrapper"><i class="material-icons">place</i>開催場所</span></th>
+              <td>本校グラウンド</td>
+            </tr>
+            <tr>
+              <th class="nobr"><span class="icon-wrapper"><i class="material-icons">directions_walk</i>来場方法</span></th>
+              <td>一般来場者の方はPM7:00からグラウンド付近の観覧席へご入場ください。</td>
+            </tr>
+          </table>
+          <h5>お車でお越しの方へ</h5>
+          <p class="section-text">
+            一般公開終了後(PM4:00)、打ち上げ準備のため駐車場を閉鎖いたします。自家用車でお越しの方は、お早めの車のご移動をお願いいたします。
+          </p>
+          <p class="section-text">
+            花火大会時の駐車場は学寮宿舎付近となります。スペースに余裕が無いため、花火をご覧になる方はなるべく公共交通機関をご利用ください。
+          </p>
         </section>
       </div>
       <div class="col l2 hide-on-med-and-down right-col">

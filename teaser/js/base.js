@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  $("footer").load("/30/include/footer.html");
+
   $('.sidenav').sidenav();
   $('.scrollspy').scrollSpy();
   $('.collapsible').collapsible();
@@ -9,6 +11,10 @@ $(document).ready(function(){
   var rand = colors[Math.floor(Math.random() * 3)];
   $('.table-of-contents').find('a').addClass(rand);
 });
+
+/* スマホ版で100vhがUIでずれるときの対処法 */
+var vh = $(window).innerHeight() * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 $(window).scroll(function() {
   scroll_to_top();
@@ -23,7 +29,7 @@ $('.collapsible-header').click(function() {
 });
 
 function scroll_to_top () {
-  if($(window).scrollTop() > 800 && $(document).width() > 600) {
+  if($(window).scrollTop() > 1200) {
     $('#scroll-to-top').fadeIn(100)
   } else {
     $('#scroll-to-top').fadeOut(100);
