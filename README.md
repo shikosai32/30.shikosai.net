@@ -1,5 +1,10 @@
 # Shikosai_30
-茨香祭のWebサイト
+
+2018 年に開催された第 30 回茨香祭の公式サイトです。
+
+一部修正を加えています。
+
+元リポジトリ: [ibcnit-shikosai/shikosai_30](https://github.com/ibcnit-shikosai/shikosai_30)
 
 <!--
 ### Ver 0.2\
@@ -20,7 +25,6 @@
   - メニューのタイトルを中央から左側に（メニューボタンの右側）
 -->
 
-
-> Materialize v1.0.0-beta (http://materializecss.com)  
-> Copyright 2014-2017 Materialize  
-> MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)  
+> Materialize v1.0.0-beta (http://materializecss.com)<br />
+> Copyright 2014-2017 Materialize<br />
+> MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
