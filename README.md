@@ -6,6 +6,14 @@
 
 元リポジトリ: [ibcnit-shikosai/shikosai_30](https://github.com/ibcnit-shikosai/shikosai_30)
 
+#### デプロイを行う場合
+
+次のコマンドを実行し、`out` ディレクトリを生成します。
+
+```bash
+npm run build-sass && rm -r out/ && mkdir out/ && cp -r 30/ pdf/ *.html favicon.ico out/
+```
+
 <!--
 ### Ver 0.2\
 - この版以降はcommitメッセージに変更点を記します。
