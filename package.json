@@ -1,0 +1,11 @@
+{
+  "name": "shikosai30",
+  "version": "2.3.3",
+  "license": "MIT",
+  "scripts": {
+    "build-sass": "node-sass scss/main.scss 30/css/main.css"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
